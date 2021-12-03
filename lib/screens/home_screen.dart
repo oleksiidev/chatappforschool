@@ -1,8 +1,10 @@
+import 'package:chatappforschool/helpers.dart';
 import 'package:chatappforschool/pages/calls_page.dart';
 import 'package:chatappforschool/pages/contacts_page.dart';
 import 'package:chatappforschool/pages/messages_page.dart';
 import 'package:chatappforschool/pages/notifications_page.dart';
 import 'package:chatappforschool/theme.dart';
+import 'package:chatappforschool/widgets/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -51,6 +53,17 @@ class HomeScreen extends StatelessWidget {
             );
           },
         ),
+        leading: Align(
+          alignment: Alignment.centerRight,
+          child: IconBackground(icon: Icons.search,
+          onTap: (){
+            print('todo search');
+          },),
+        ),
+        actions: [Padding(
+          padding: const EdgeInsets.only(right: 24.0),
+          child: Avatar.small(url: Helpers.randomPictureUrl()),
+        )],
       ),
       body: ValueListenableBuilder(
         valueListenable: pageIndex,
