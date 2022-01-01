@@ -277,7 +277,7 @@ class _AppBarTitle extends StatelessWidget {
             Text(
               messageData.senderName,
               overflow: TextOverflow.ellipsis,
-              style: const TextStyle(fontSize: 14, color: Colors.black),
+              style: const TextStyle(fontSize: 14),
             ),
             const SizedBox(height: 2),
             const Text(

@@ -16,7 +16,7 @@ class MessagesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
-        SliverToBoxAdapter(child: _Stories()),
+        const SliverToBoxAdapter(child: _Stories()),
         SliverList(
           delegate: SliverChildBuilderDelegate(_delegate),
         ),
@@ -181,7 +181,7 @@ class _Stories extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: SizedBox(
                       width: 60,
-                      child: _storyCard(
+                      child: _StoryCard(
                         storyData: StoryData(
                           name: faker.person.name(),
                           url: Helpers.randomPictureUrl(),
@@ -199,8 +199,8 @@ class _Stories extends StatelessWidget {
   }
 }
 
-class _storyCard extends StatelessWidget {
-  const _storyCard({
+class _StoryCard extends StatelessWidget {
+  const _StoryCard({
     Key? key,
     required this.storyData,
   }) : super(key: key);
